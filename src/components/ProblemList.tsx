@@ -25,13 +25,13 @@ const ProblemList: React.FC<ProblemListProps> = ({
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Easy':
-        return 'text-green-600'
+        return 'text-green-500'
       case 'Medium':
-        return 'text-yellow-600'
+        return 'text-yellow-500'
       case 'Hard':
-        return 'text-red-600'
+        return 'text-red-500'
       default:
-        return 'text-gray-600'
+        return 'text-gray-500'
     }
   }
 
@@ -43,7 +43,7 @@ const ProblemList: React.FC<ProblemListProps> = ({
   return (
     <div className="bg-white shadow overflow-hidden sm:rounded-md">
       <ul className="divide-y divide-gray-200">
-        {problems.map((problem) => (
+        {problems.slice().reverse().map((problem) => (
           <li key={problem.id} className="px-4 py-4 sm:px-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center">
@@ -58,10 +58,12 @@ const ProblemList: React.FC<ProblemListProps> = ({
                   )}
                 </button>
                 <div className="min-w-0 flex-1">
-                  <p className="text-sm font-medium text-indigo-600 truncate">{problem.title}</p>
-                  <p className={`text-sm ${getDifficultyColor(problem.difficulty)}`}>{problem.difficulty}</p>
-                  <p className="text-xs text-gray-500">Submitted: {formatDate(problem.submittedDate)}</p>
-                  <p className="text-xs text-gray-500">DSA Pattern: {problem.dsaPattern || 'Not specified'}</p>
+                  <p className={`text-xl font-medium ${getDifficultyColor(problem.difficulty)} truncate`}>{problem.title.replace(/_/g, " ").replace(/^\w/, (c) => c.toUpperCase())}</p>
+                  <p className={`text-md text-indigo-600`}>
+                  Pattern: {problem.dsaPattern.replace(/_/g, " ").replace(/^\w/, (c) => c.toUpperCase()) || 'Not specified'}
+                  </p>
+                  {/* <p className="text-md text-gray-600">DSA Pattern: {problem.dsaPattern || 'Not specified'}</p> */}
+                  <p className="text-sm text-gray-600">Submitted: {formatDate(problem.submittedDate)}</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">

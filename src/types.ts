@@ -27,4 +27,5 @@ export interface AddProblemFormData {
   link: string;
   dsaPattern: string;
   needsRevision: boolean;
+  submittedDate: string;
 }

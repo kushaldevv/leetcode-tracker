@@ -32,7 +32,7 @@ const ContributionGraph: React.FC<ContributionGraphProps> = ({ problems }) => {
     const dateString = date.toISOString().split('T')[0]
     const problemsForDay = problemsByDate[dateString] || []
 
-    if (problemsForDay.length === 0) return 'bg-gray-100'
+    if (problemsForDay.length === 0) return 'bg-gray-200'
 
     const difficultyColors = {
       Easy: 'bg-green-200',
@@ -49,8 +49,8 @@ const ContributionGraph: React.FC<ContributionGraphProps> = ({ problems }) => {
   }
 
   return (
-    <div className="mb-8">
-      <h2 className="text-lg font-semibold mb-2">Contribution Graph</h2>
+    <div className="mb-8 p-2">
+      <h2 className="text-lg font-semibold mb-2">{problems.length} contributions in past year</h2>
       <div className="flex flex-wrap">
         {allDays.map((date, index) => (
           <div

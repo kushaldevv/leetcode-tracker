@@ -69,12 +69,21 @@ const TableComponent: React.FC<TableComponentProps> = ({ tableData, onUpdateTabl
     onUpdateTable(newData)
   }
 
+  const [showTable, setShowTable] = useState(localTableData.columns.length > 0)
+
   return (
-    <div className="overflow-x-auto bg-white rounded-lg shadow">
-      <table className="min-w-full divide-y divide-gray-200">
+    <div className="overflow-x-auto bg-white rounded-lg">
+{!showTable &&        <button
+          onClick={()=>setShowTable(true)}
+          className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          <PlusCircle className="h-4 w-4 mr-2" />
+          Create Table
+        </button>}
+      {showTable && <table className="min-w-full divide-y divide-gray-200 shadow">
         <thead className="bg-gray-50">
           <tr>
-            {localTableData.columns.map((column, index) => (
+            { localTableData.columns.map((column, index) => (
               <th key={index} className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 <div className="flex items-center space-x-2">
                   <input
@@ -134,8 +143,8 @@ const TableComponent: React.FC<TableComponentProps> = ({ tableData, onUpdateTabl
             </tr>
           ))}
         </tbody>
-      </table>
-      <div className="px-6 py-4">
+      </table>}
+{showTable &&      <div className="px-6 py-4">
         <button
           onClick={addRow}
           className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -143,7 +152,7 @@ const TableComponent: React.FC<TableComponentProps> = ({ tableData, onUpdateTabl
           <PlusCircle className="h-4 w-4 mr-2" />
           Add Row
         </button>
-      </div>
+      </div>}
     </div>
   )
 }
