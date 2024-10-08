@@ -1,4 +1,4 @@
-# LeetCode Tracker
+# [LeetCode Tracker](https://leetcode-tracker-15957.web.app/)
 
 ![Screenshot 2024-10-07 at 8 04 54 PM](https://github.com/user-attachments/assets/3b17479c-2c00-4ecf-9dcd-028c6f736de0)
 
