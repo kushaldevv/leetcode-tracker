@@ -5,7 +5,7 @@ import AddProblemForm from './components/AddProblemForm'
 import ContributionGraph from './components/ContributionGraph'
 import { Problem, AddProblemFormData } from './types'
 import { loadProblems, saveProblems } from './services/problemStorage'
-
+// test
 // const importProblems: Problem[] = [
 //   {
 //     id: 1,
@@ -264,9 +264,6 @@ const App: React.FC = () => {
   }, [])
 
   // const migrateProblemData = () => {
-  //   // const updatedProblems = problems.map(problem => ({
-  //   //   ...problem,
-  //   // }))
   //   const updatedProblems = [...problems, ...importProblems]
   //   setProblems(updatedProblems)
   //   saveProblems(updatedProblems)

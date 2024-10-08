@@ -5,7 +5,7 @@
 ## 🚀 About The Project
 
 LeetCode Tracker is a web application designed to help you keep track of your LeetCode problem-solving journey. It provides an intuitive interface to log, organize, and analyze your progress as you tackle various coding challenges on LeetCode.
-All problems date is stored in local storage!!
+All problems data is stored in local storage!!
 
 ## ✨ Features
 
