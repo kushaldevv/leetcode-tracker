@@ -21,11 +21,11 @@ const App: React.FC = () => {
     setProblems(loadedProblems)
   }, [])
 
-  const migrateProblemData = () => {
-    const updatedProblems = [...problems, ...importProblems]
-    setProblems(updatedProblems)
-    saveProblems(updatedProblems)
-  }
+  // const migrateProblemData = () => {
+  //   const updatedProblems = [...problems, ...importProblems]
+  //   setProblems(updatedProblems)
+  //   saveProblems(updatedProblems)
+  // }
 
   const handleAddProblem = (formData: AddProblemFormData) => {
     const newProblem: Problem = {
