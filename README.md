@@ -16,6 +16,7 @@ All problems date is stored in local storage!!
 - **Notes and Reflections**: Add personal notes and reflections for each problem to reinforce your learning.
 
 ## 🛠️ Built With
+
 - [Bolt.new](https://bolt.new/)
 - [React](https://reactjs.org/)
 - [Vite](https://www.typescriptlang.org/](https://vite.dev/))
@@ -36,7 +37,7 @@ To get a local copy up and running, follow these simple steps:
    ```sh
    npm run dev
    ```
-   
+
 ## 🤝 Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -46,7 +47,3 @@ Contributions are what make the open source community such an amazing place to l
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📝 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
